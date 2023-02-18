@@ -18,7 +18,7 @@ namespace TEST
             box = new BoxView
             {
                 Color = Color.FromRgb(0, 0, 0),
-                CornerRadius = 15,
+                CornerRadius = 25,
                 WidthRequest = 100,
                 HeightRequest = 200,
                 HorizontalOptions=LayoutOptions.CenterAndExpand,

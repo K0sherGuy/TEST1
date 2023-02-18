@@ -15,6 +15,12 @@ namespace TEST
         public StartPage()
         {
             //InitializeComponent();
+            Button Valgusfoor_btn = new Button
+            {
+                Text = "Ava Valgusfoor leht",
+                TextColor = Color.Wheat,
+                BackgroundColor = Color.White
+            };
             Button Entry_btn= new Button
             {
                 Text = "Ava Entry leht",
@@ -39,13 +45,19 @@ namespace TEST
             StackLayout st = new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
-                Children = { Entry_btn, Timer_btn, BoxView_btn },
+                Children = { Entry_btn, Timer_btn, BoxView_btn, Valgusfoor_btn },
                 BackgroundColor = Color.YellowGreen
             };
             Content = st;
             Entry_btn.Clicked += Entry_btn_Clicked;
             Timer_btn.Clicked += Timer_btn_Clicked;
             BoxView_btn.Clicked += BoxView_btn_Clicked;
+            Valgusfoor_btn.Clicked += Valgusfoor_btn_Clicked;
+        }
+
+        private async void Valgusfoor_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Valgusfoor_Page());
         }
 
         private async void BoxView_btn_Clicked(object sender, EventArgs e)
